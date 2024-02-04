@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://c2jhmqsjakx6c"
+path="res://.godot/imported/cabinTest.map-74fa96abd6b8c8ce09711fa929f724de.tres"
+
+[deps]
+
+source_file="res://assets/maps/cabinTest.map"
+dest_files=["res://.godot/imported/cabinTest.map-74fa96abd6b8c8ce09711fa929f724de.tres"]
+
+[params]
+

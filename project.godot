@@ -23,6 +23,10 @@ window/vsync/vsync_mode=0
 
 project/assembly_name="playspace"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/qodot/plugin.cfg")
+
 [input]
 
 left={
