@@ -2,10 +2,10 @@ extends CharacterBody3D
 
 # Player nodes
 
-@onready var head = $"head (pivot)"
-@onready var standing_collison_shape = $standing_collison_shape
-@onready var crouching_collison_shape = $crouching_collison_shape
-@onready var ray_cast_3D = $RayCast3D
+@onready var head = $"head (pivot)2"
+@onready var standing_collison_shape = $standing_collison_shape2
+@onready var crouching_collison_shape = $crouching_collison_shape2
+@onready var ray_cast_3D = $RayCast3D2
 
 # Speed and mouse_sens vars
 
