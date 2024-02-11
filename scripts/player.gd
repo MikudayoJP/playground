@@ -26,7 +26,6 @@ var direction = Vector3.ZERO
 
 const jump_velocity = 4.5
 
-
 func _ready():
 	
 	#Responsible for mouse not leaving game windwos

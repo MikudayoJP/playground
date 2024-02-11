@@ -98,21 +98,7 @@ points = PackedVector3Array(-6.66667, 7, -6.66667, -6.66667, 6.33333, -6.66667, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_35ldc")
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
-quality = 3
-bounces = 6
-interior = true
-light_data = ExtResource("1_3yxjo")
-
-[node name="LightmapProbe" type="LightmapProbe" parent="."]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.695913, -0.717772, 0.0225569, 0, 0.0314107, 0.999507, -0.718126, -0.695569, 0.0218591, 0, 3, 0)
-light_bake_mode = 1
-shadow_enabled = true
-
 [node name="QodotMap2" type="Node3D" parent="."]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 script = ExtResource("1_4wp3l")
 map_file = "C:/Users/leon/Documents/godotProjects/playground/playground/assets/mapFilesTrenchbroom/pyramidDarkRoom.map"
 inverse_scale_factor = 48.0
@@ -152,6 +138,20 @@ shape = SubResource("ConvexPolygonShape3D_8uh6d")
 
 [node name="entity_0_brush_7_collision_shape" type="CollisionShape3D" parent="QodotMap2/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_44din")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 3
+bounces = 6
+interior = true
+light_data = ExtResource("1_3yxjo")
+
+[node name="LightmapProbe" type="LightmapProbe" parent="."]
+transform = Transform3D(1.11111, 0, 0, 0, 1.11111, 0, 0, 0, 1.11111, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.695913, -0.717772, 0.0225569, 0, 0.0314107, 0.999507, -0.718126, -0.695569, 0.0218591, 0, 3, 0)
+light_bake_mode = 1
+shadow_enabled = true
 
 [node name="player" parent="." instance=ExtResource("5_6355r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
