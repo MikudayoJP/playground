@@ -25,23 +25,23 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en37w"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ejbpe"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gv8b"]
 albedo_texture = ExtResource("6_33hul")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ri70e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ipja5"]
 albedo_texture = ExtResource("7_srf1v")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijimg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3ix0"]
 albedo_texture = ExtResource("8_0t84w")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_31qk3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bq8k1"]
 _surfaces = [{
 "aabb": AABB(-16, -1, -12, 32, 2.00001, 24),
 "attribute_data": PackedByteArray(0, 0, 192, 191, 0, 0, 128, 189, 0, 0, 192, 191, 0, 0, 128, 61, 0, 0, 0, 63, 0, 0, 128, 61, 0, 0, 0, 63, 0, 0, 128, 189, 0, 0, 64, 191, 0, 0, 128, 189, 0, 0, 64, 63, 0, 0, 128, 189, 0, 0, 64, 63, 0, 0, 128, 61, 0, 0, 64, 191, 0, 0, 128, 61, 0, 0, 64, 63, 0, 0, 128, 191, 0, 0, 64, 63, 0, 0, 128, 63, 0, 0, 64, 191, 0, 0, 128, 63, 0, 0, 64, 191, 0, 0, 128, 191, 0, 0, 64, 191, 0, 0, 128, 191, 0, 0, 64, 63, 0, 0, 128, 191, 0, 0, 64, 63, 0, 0, 128, 63, 0, 0, 64, 191, 0, 0, 128, 63, 0, 0, 64, 63, 0, 0, 128, 189, 0, 0, 64, 63, 0, 0, 128, 61, 0, 0, 64, 191, 0, 0, 128, 61, 0, 0, 64, 191, 0, 0, 128, 189, 0, 0, 192, 63, 0, 0, 128, 189, 0, 0, 0, 191, 0, 0, 128, 189, 0, 0, 0, 191, 0, 0, 128, 61, 0, 0, 192, 63, 0, 0, 128, 61),
 "format": 34359742487,
 "index_count": 36,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0),
-"material": SubResource("StandardMaterial3D_ejbpe"),
+"material": SubResource("StandardMaterial3D_4gv8b"),
 "name": "256x256/Grass/Grass_03-256x256",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -53,7 +53,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 36,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0),
-"material": SubResource("StandardMaterial3D_ri70e"),
+"material": SubResource("StandardMaterial3D_ipja5"),
 "name": "256x256/Bricks/Bricks_01-256x256",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -65,7 +65,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 36,
 "index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 4, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 8, 0, 10, 0, 11, 0, 12, 0, 13, 0, 14, 0, 12, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 16, 0, 18, 0, 19, 0, 20, 0, 21, 0, 22, 0, 20, 0, 22, 0, 23, 0),
-"material": SubResource("StandardMaterial3D_ijimg"),
+"material": SubResource("StandardMaterial3D_e3ix0"),
 "name": "256x256/Roofs/Roofs_01-256x256",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -73,17 +73,17 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 64, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 64, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 64, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 191, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 192, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 64, 0, 0, 16, 193, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 65, 0, 0, 112, 65, 1, 0, 128, 63, 0, 0, 16, 65, 0, 0, 0, 65, 1, 0, 160, 64, 0, 0, 16, 193, 0, 0, 0, 65, 1, 0, 160, 64, 115, 209, 255, 255, 0, 0, 255, 63, 115, 209, 255, 255, 0, 0, 255, 63, 115, 209, 255, 255, 0, 0, 255, 63, 115, 209, 255, 255, 0, 0, 255, 63, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 255, 127, 0, 0, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 255, 191, 255, 127, 0, 0, 255, 127, 255, 191, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 255, 255, 255, 255, 127, 255, 127, 255, 191, 255, 255, 255, 127, 255, 127, 255, 191, 255, 255, 255, 127, 255, 127, 255, 191, 255, 255, 255, 127, 255, 127, 255, 191, 255, 127, 138, 174, 255, 255, 255, 63, 255, 127, 138, 174, 255, 255, 255, 63, 255, 127, 138, 174, 255, 255, 255, 63, 255, 127, 138, 174, 255, 255, 255, 63)
 }]
 
-[sub_resource type="ArrayOccluder3D" id="ArrayOccluder3D_7bqaw"]
+[sub_resource type="ArrayOccluder3D" id="ArrayOccluder3D_6cf4p"]
 vertices = PackedVector3Array(-16, 1, -12, -16, -1, -12, 16, -1, -12, 16, 1, -12, -16, 1, -12, -16, 1, 12, -16, -1, 12, -16, -1, -12, 16, -1, -12, -16, -1, -12, -16, -1, 12, 16, -1, 12, 16, 1, -12, 16, 1, 12, -16, 1, 12, -16, 1, -12, 16, 1, -12, 16, -1, -12, 16, -1, 12, 16, 1, 12, -16, 1, 12, 16, 1, 12, 16, -1, 12, -16, -1, 12, -8, 8, -3, -8, 1, -3, 8, 1, -3, 8, 8, -3, -8, 8, -3, -8, 8, 3, -8, 1, 3, -8, 1, -3, 8, 1, -3, -8, 1, -3, -8, 1, 3, 8, 1, 3, 8, 8, -3, 8, 8, 3, -8, 8, 3, -8, 8, -3, 8, 8, -3, 8, 1, -3, 8, 1, 3, 8, 8, 3, -8, 8, 3, 8, 8, 3, 8, 1, 3, -8, 1, 3, -9, 15, -1, -9, 8, -5, 9, 8, -5, 9, 15, -1, -9, 15, -1, -9, 15, 1, -9, 8, 5, -9, 8, -5, 9, 8, -5, -9, 8, -5, -9, 8, 5, 9, 8, 5, 9, 15, -1, 9, 15, 1, -9, 15, 1, -9, 15, -1, 9, 15, 1, 9, 15, -1, 9, 8, -5, 9, 8, 5, -9, 15, 1, 9, 15, 1, 9, 8, 5, -9, 8, 5)
 indices = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 25, 26, 24, 26, 27, 28, 29, 30, 28, 30, 31, 32, 33, 34, 32, 34, 35, 36, 37, 38, 36, 38, 39, 40, 41, 42, 40, 42, 43, 44, 45, 46, 44, 46, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 49, 50, 48, 50, 51, 52, 53, 54, 52, 54, 55, 56, 57, 58, 56, 58, 59, 60, 61, 62, 60, 62, 63, 64, 65, 66, 64, 66, 67, 68, 69, 70, 68, 70, 71)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rt275"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y26mn"]
 points = PackedVector3Array(-16, 1, -12, -16, -1, -12, 16, -1, -12, 16, 1, -12, -16, 1, 12, -16, -1, 12, 16, -1, 12, 16, 1, 12)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vv8x1"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wgjr2"]
 points = PackedVector3Array(-8, 8, -3, -8, 1, -3, 8, 1, -3, 8, 8, -3, -8, 8, 3, -8, 1, 3, 8, 1, 3, 8, 8, 3)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8garx"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_i28lm"]
 points = PackedVector3Array(-9, 15, -1, -9, 8, -5, 9, 8, -5, 9, 15, -1, -9, 15, 1, -9, 8, 5, 9, 8, 5, 9, 15, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjkem"]
@@ -231,7 +231,7 @@ material = ExtResource("1_2g72i")
 [node name="QodotMap" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -23)
 script = ExtResource("4_vu5a3")
-map_file = "C:/Users/leon/Documents/godotProjects/playground/playground/assets/maps/cabinTest.map"
+map_file = "C:/Users/leon/Documents/godotProjects/playground/playground/assets/mapFilesTrenchbroom/cabinTest.map"
 entity_fgd = ExtResource("5_737qf")
 base_texture_dir = "res://assets/textures"
 texture_file_extensions = PackedStringArray("png", "jpg", "jpeg", "bmp")
@@ -240,19 +240,19 @@ default_material = SubResource("StandardMaterial3D_en37w")
 [node name="entity_0_worldspawn" type="StaticBody3D" parent="QodotMap"]
 
 [node name="entity_0_mesh_instance" type="MeshInstance3D" parent="QodotMap/entity_0_worldspawn"]
-mesh = SubResource("ArrayMesh_31qk3")
+mesh = SubResource("ArrayMesh_bq8k1")
 
 [node name="entity_0_occluder_instance" type="OccluderInstance3D" parent="QodotMap/entity_0_worldspawn"]
-occluder = SubResource("ArrayOccluder3D_7bqaw")
+occluder = SubResource("ArrayOccluder3D_6cf4p")
 
 [node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="QodotMap/entity_0_worldspawn"]
-shape = SubResource("ConvexPolygonShape3D_rt275")
+shape = SubResource("ConvexPolygonShape3D_y26mn")
 
 [node name="entity_0_brush_1_collision_shape" type="CollisionShape3D" parent="QodotMap/entity_0_worldspawn"]
-shape = SubResource("ConvexPolygonShape3D_vv8x1")
+shape = SubResource("ConvexPolygonShape3D_wgjr2")
 
 [node name="entity_0_brush_2_collision_shape" type="CollisionShape3D" parent="QodotMap/entity_0_worldspawn"]
-shape = SubResource("ConvexPolygonShape3D_8garx")
+shape = SubResource("ConvexPolygonShape3D_i28lm")
 
 [node name="QodotMap2" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 52)

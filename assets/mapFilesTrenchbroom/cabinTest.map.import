@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://bc8ejxfug2usd"
+path="res://.godot/imported/cabinTest.map-4bce7c98d2fe0e51714b196cd69b537c.tres"
+
+[deps]
+
+source_file="res://assets/mapFilesTrenchbroom/cabinTest.map"
+dest_files=["res://.godot/imported/cabinTest.map-4bce7c98d2fe0e51714b196cd69b537c.tres"]
+
+[params]
+
