@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://br4lpph34m0y6"]
+
+[ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://icon.png" id="1_2o4tg"]
+[ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://player.tscn" id="1_7oy31"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_dw4y2"]
+size = Vector2(1200, 50)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8dphf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qu3y"]
+size = Vector2(1200, 50)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_7oy31")]
+position = Vector2(270, 209)
+
+[node name="floor" type="MeshInstance2D" parent="."]
+position = Vector2(575, 622)
+scale = Vector2(1.00167, 1)
+mesh = SubResource("QuadMesh_dw4y2")
+texture = ExtResource("1_2o4tg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="floor"]
+physics_material_override = SubResource("PhysicsMaterial_8dphf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
+shape = SubResource("RectangleShape2D_0qu3y")
