@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ei6g1btifyy3"
-path="res://.godot/imported/autism ponk.png-99f194e619793b94d8d761331d255384.ctex"
+path="res://.godot/imported/autism ponk.png-8543b2692d67a7a3fda81e03added397.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://autism ponk.png"
-dest_files=["res://.godot/imported/autism ponk.png-99f194e619793b94d8d761331d255384.ctex"]
+source_file="res://assets/icons/autism ponk.png"
+dest_files=["res://.godot/imported/autism ponk.png-8543b2692d67a7a3fda81e03added397.ctex"]
 
 [params]
 
