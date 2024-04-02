@@ -1,0 +1,14 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+uid="uid://bkwop3dx1ajem"
+path="res://.godot/imported/shaderTest.map-b14ecf2f39a446e6ad617807a2ad2635.tres"
+
+[deps]
+
+source_file="res://assets/mapFilesTrenchbroom/shaderTest.map"
+dest_files=["res://.godot/imported/shaderTest.map-b14ecf2f39a446e6ad617807a2ad2635.tres"]
+
+[params]
+
