@@ -29,7 +29,7 @@ size = Vector2(1200, 50)
 [node name="Main" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(269.996, 501)
+position = Vector2(283.001, 501)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("1_whupo")
@@ -38,7 +38,7 @@ script = ExtResource("1_whupo")
 curve = SubResource("Curve2D_1ojvd")
 
 [node name="PhantomCamera2D" type="Node2D" parent="."]
-position = Vector2(269.996, 501)
+position = Vector2(283.001, 501)
 script = ExtResource("1_d8v1d")
 priority_override = false
 priority = 0
@@ -46,10 +46,11 @@ zoom = Vector2(1, 1)
 follow_mode = 4
 follow_target = NodePath("../Player")
 follow_path = NodePath("../Path2D")
-follow_parameters/damping = false
+follow_parameters/damping = true
+follow_parameters/damping_value = 10.0
 frame_preview = true
 pixel_perfect = false
-limit/draw_limits = false
+limit/draw_limits = true
 limit/left = -10000000
 limit/top = -10000000
 limit/right = 10000000
@@ -61,7 +62,7 @@ tween_on_load = true
 inactive_update_mode = 0
 
 [node name="Player" parent="." instance=ExtResource("1_7oy31")]
-position = Vector2(270, 209)
+position = Vector2(283, 289)
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(1337.5, 622)
