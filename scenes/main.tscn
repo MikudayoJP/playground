@@ -1,7 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://br4lpph34m0y6"]
+[gd_scene load_steps=11 format=3 uid="uid://br4lpph34m0y6"]
 
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="1_2o4tg"]
 [ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="1_7oy31"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="1_d8v1d"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_whupo"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_mk0kd"]
+
+[sub_resource type="Curve2D" id="Curve2D_1ojvd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 501, 0, 0, 0, 0, 2623, 501)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_gxb6v"]
+script = ExtResource("2_mk0kd")
+duration = 1.0
+transition = 0
+ease = 2
 
 [sub_resource type="QuadMesh" id="QuadMesh_dw4y2"]
 size = Vector2(1200, 50)
@@ -13,12 +28,44 @@ size = Vector2(1200, 50)
 
 [node name="Main" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(269.996, 501)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("1_whupo")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_1ojvd")
+
+[node name="PhantomCamera2D" type="Node2D" parent="."]
+position = Vector2(269.996, 501)
+script = ExtResource("1_d8v1d")
+priority_override = false
+priority = 0
+zoom = Vector2(1, 1)
+follow_mode = 4
+follow_target = NodePath("../Player")
+follow_path = NodePath("../Path2D")
+follow_parameters/damping = false
+frame_preview = true
+pixel_perfect = false
+limit/draw_limits = false
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/limit_node_target = NodePath("")
+limit/smoothed = false
+tween_parameters = SubResource("Resource_gxb6v")
+tween_on_load = true
+inactive_update_mode = 0
+
 [node name="Player" parent="." instance=ExtResource("1_7oy31")]
 position = Vector2(270, 209)
 
 [node name="floor" type="MeshInstance2D" parent="."]
-position = Vector2(575, 622)
-scale = Vector2(1.00167, 1)
+position = Vector2(1337.5, 622)
+scale = Vector2(2.2725, 1)
 mesh = SubResource("QuadMesh_dw4y2")
 texture = ExtResource("1_2o4tg")
 
