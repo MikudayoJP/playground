@@ -1,14 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://br4lpph34m0y6"]
+[gd_scene load_steps=14 format=3 uid="uid://br4lpph34m0y6"]
 
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="1_2o4tg"]
 [ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="1_7oy31"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="1_d8v1d"]
 [ext_resource type="Texture2D" uid="uid://bhgq33mjvs0pm" path="res://assets/textures/background/2884087.png" id="1_te60c"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_whupo"]
+[ext_resource type="Script" path="res://scenes/Area2DTrigger.gd" id="2_47ue2"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_mk0kd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_krnoc"]
-size = Vector2(238, 225)
+[sub_resource type="Resource" id="Resource_gxb6v"]
+script = ExtResource("2_mk0kd")
+duration = 1.0
+transition = 0
+ease = 2
 
 [sub_resource type="Curve2D" id="Curve2D_1ojvd"]
 _data = {
@@ -16,11 +20,8 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Resource" id="Resource_gxb6v"]
-script = ExtResource("2_mk0kd")
-duration = 1.0
-transition = 0
-ease = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krnoc"]
+size = Vector2(238, 225)
 
 [sub_resource type="QuadMesh" id="QuadMesh_dw4y2"]
 size = Vector2(1200, 50)
@@ -39,6 +40,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = -717.0
 offset_top = -658.0
 offset_right = 5639.0
@@ -47,27 +49,11 @@ texture = ExtResource("1_te60c")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_left = 1583.0
-offset_top = 373.0
-offset_right = 1820.0
-offset_bottom = 598.0
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1701, 485.5)
-shape = SubResource("RectangleShape2D_krnoc")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(282.996, 501)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("1_whupo")
-
-[node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_1ojvd")
 
 [node name="PhantomCamera2D" type="Node2D" parent="."]
 position = Vector2(282.996, 501)
@@ -93,8 +79,26 @@ tween_parameters = SubResource("Resource_gxb6v")
 tween_on_load = true
 inactive_update_mode = 0
 
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_1ojvd")
+
 [node name="Player" parent="." instance=ExtResource("1_7oy31")]
+z_index = 1
 position = Vector2(283, 289)
+
+[node name="Area2D_test" type="Area2D" parent="."]
+position = Vector2(336, 0)
+script = ExtResource("2_47ue2")
+
+[node name="ColorRect" type="ColorRect" parent="Area2D_test"]
+offset_left = 1583.0
+offset_top = 373.0
+offset_right = 1820.0
+offset_bottom = 598.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_test"]
+position = Vector2(1701, 485.5)
+shape = SubResource("RectangleShape2D_krnoc")
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(2579.25, 623)
@@ -107,3 +111,5 @@ physics_material_override = SubResource("PhysicsMaterial_8dphf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
 shape = SubResource("RectangleShape2D_0qu3y")
+
+[connection signal="body_entered" from="Area2D_test" to="Player" method="_on_area_2d_body_entered"]

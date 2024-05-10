@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 @export var current_speed = 300.0
 @export var jump_velocity = -400.0
 @export var walking_speed = 300.0
@@ -10,6 +9,8 @@ extends CharacterBody2D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -37,3 +38,7 @@ func _physics_process(delta):
 		current_speed = walking_speed
 	
 	move_and_slide()
+	
+func _on_area_2d_body_entered(body):
+	if body is CharacterBody2D:
+		get_tree().quit()
