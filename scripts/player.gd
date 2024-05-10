@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var player = $"/root/Main/Player"
+@onready var colorRect = $"/root/Main/Area2D_test/ColorRect"
+
 @export var current_speed = 300.0
 @export var jump_velocity = -400.0
 @export var walking_speed = 300.0
@@ -40,5 +43,19 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func _on_area_2d_body_entered(body):
-	if body is CharacterBody2D:
-		get_tree().quit()
+	#TODO needs to be updated for player specific
+	#TODO needs to be put into another script
+	if body.name == player.name:
+		#pass
+		colorRect.set_color(Color.CHARTREUSE)
+	if Input.is_action_just_pressed("interact"):
+		pass
+		#dprint("wadad")
+		#colorRect.set_color(Color.YELLOW_GREEN)
+
+
+func _on_area_2d_test_body_exited(body):
+	#TODO needs to be updated for player specific
+	#TODO needs to be put into another script
+	if body.name == player.name:
+		colorRect.set_color(Color.WHITE)
