@@ -1,15 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://br4lpph34m0y6"]
+[gd_scene load_steps=13 format=3 uid="uid://blrxd38s81r8r"]
 
-[ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="1_2o4tg"]
-[ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="1_7oy31"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="1_d8v1d"]
-[ext_resource type="Texture2D" uid="uid://bhgq33mjvs0pm" path="res://assets/textures/background/2884087.png" id="1_te60c"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_whupo"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="2_mk0kd"]
-[ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_n2mp5"]
+[ext_resource type="Texture2D" uid="uid://cfhkosmt2atbk" path="res://assets/textures/background/large.png" id="1_ev40j"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_kreex"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="3_uo3e5"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_w7kck"]
+[ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="5_0bf4j"]
+[ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_rw4x8"]
+[ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_0cswa"]
 
 [sub_resource type="Resource" id="Resource_gxb6v"]
-script = ExtResource("2_mk0kd")
+script = ExtResource("4_w7kck")
 duration = 1.0
 transition = 0
 ease = 2
@@ -28,7 +28,7 @@ size = Vector2(1200, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0qu3y"]
 size = Vector2(1200, 50)
 
-[node name="Main" type="Node2D"]
+[node name="testScene" type="Node2D"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -43,20 +43,20 @@ offset_left = -717.0
 offset_top = -658.0
 offset_right = 5639.0
 offset_bottom = 2048.0
-texture = ExtResource("1_te60c")
+texture = ExtResource("1_ev40j")
 expand_mode = 2
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1254, 501)
+position = Vector2(1061, 501)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
-script = ExtResource("1_whupo")
+script = ExtResource("2_kreex")
 
 [node name="PhantomCamera2D" type="Node2D" parent="."]
-position = Vector2(1254, 501)
-script = ExtResource("1_d8v1d")
+position = Vector2(1061, 501)
+script = ExtResource("3_uo3e5")
 priority_override = false
 priority = 0
 zoom = Vector2(1, 1)
@@ -81,18 +81,18 @@ inactive_update_mode = 0
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_1ojvd")
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_7oy31")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("5_0bf4j")]
 z_index = 1
-position = Vector2(1254, 440)
+position = Vector2(1061, 450)
 
-[node name="debug_doors" parent="." instance=ExtResource("6_n2mp5")]
-next_level = "testScene"
+[node name="debug_doors" parent="." instance=ExtResource("6_rw4x8")]
+next_level = "Main"
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(2579.25, 623)
 scale = Vector2(4.29792, 1)
 mesh = SubResource("QuadMesh_dw4y2")
-texture = ExtResource("1_2o4tg")
+texture = ExtResource("7_0cswa")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="floor"]
 physics_material_override = SubResource("PhysicsMaterial_8dphf")

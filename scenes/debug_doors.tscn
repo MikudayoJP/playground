@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxk7o0gdwi7j"]
+
+[ext_resource type="Script" path="res://scenes/debug_doors.gd" id="1_mlg7b"]
+
+[sub_resource type="GDScript" id="GDScript_orsll"]
+script/source = "extends Area2D
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ab3ja"]
+size = Vector2(238, 225)
+
+[node name="debug_doors" type="Node2D"]
+script = ExtResource("1_mlg7b")
+
+[node name="Area2D_test" type="Area2D" parent="."]
+position = Vector2(336, 0)
+script = SubResource("GDScript_orsll")
+
+[node name="ColorRect" type="ColorRect" parent="Area2D_test"]
+offset_left = 1583.0
+offset_top = 373.0
+offset_right = 1820.0
+offset_bottom = 598.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_test"]
+position = Vector2(1701, 485.5)
+shape = SubResource("RectangleShape2D_ab3ja")
+
+[connection signal="body_entered" from="Area2D_test" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D_test" to="." method="_on_area_2d_body_exited"]

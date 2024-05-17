@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://assets/icons/autism ponk.png"
 
+[autoload]
+
+SceneManager="*res://scripts/SceneManager.gd"
+
 [display]
 
 window/vsync/vsync_mode=0
