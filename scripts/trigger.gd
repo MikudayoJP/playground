@@ -1,16 +1,14 @@
 extends Node2D
 
 @onready var colorRect = $"Area2D/ColorRect"
-
-#cant you do it like this @export String next_level; ?
-@export var next_level : String
+@onready var pcam_2d : PhantomCamera2D = $"/root/testScene/zoom out"
 
 func _on_area_2d_body_entered(body):
 	#needs to be updated for player specific --done
 	#TODO needs to be put into another script
-	if body.is_in_group("Player"): #and Input.is_action_pressed("interact"):
+	if body.is_in_group("Player"): #Dand Input.is_action_pressed("interact"):
 		colorRect.set_color(Color.CHARTREUSE)
-		SceneManager.transitaion_to_scene(next_level)
+		pcam_2d.set_priority(2)
 	#if Input.is_action_just_pressed("interact"):
 	#	pass
 		#dprint("wadad")
@@ -22,3 +20,4 @@ func _on_area_2d_body_exited(body):
 	#TODO needs to be put into another script
 	if body.is_in_group("Player"):
 		colorRect.set_color(Color.WHITE)
+		pcam_2d.set_priority(0)

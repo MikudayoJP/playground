@@ -1,17 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://blrxd38s81r8r"]
+[gd_scene load_steps=16 format=3 uid="uid://blrxd38s81r8r"]
 
 [ext_resource type="Texture2D" uid="uid://cfhkosmt2atbk" path="res://assets/textures/background/large.png" id="1_ev40j"]
+[ext_resource type="Texture2D" uid="uid://bi67oesbo1xv6" path="res://assets/textures/1693238312280675.png" id="2_7ainc"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_kreex"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="3_uo3e5"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_w7kck"]
 [ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="5_0bf4j"]
 [ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_rw4x8"]
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_0cswa"]
+[ext_resource type="PackedScene" uid="uid://kvb4lobhywvg" path="res://scenes/trigger.tscn" id="7_vm25o"]
 
 [sub_resource type="Resource" id="Resource_gxb6v"]
 script = ExtResource("4_w7kck")
 duration = 1.0
 transition = 0
+ease = 2
+
+[sub_resource type="Resource" id="Resource_n38rn"]
+script = ExtResource("4_w7kck")
+duration = 3.0
+transition = 1
 ease = 2
 
 [sub_resource type="Curve2D" id="Curve2D_1ojvd"]
@@ -38,7 +46,11 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-layout_mode = 0
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -28.3
+anchor_bottom = 24.025
 offset_left = -717.0
 offset_top = -658.0
 offset_right = 5639.0
@@ -47,6 +59,14 @@ texture = ExtResource("1_ev40j")
 expand_mode = 2
 stretch_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1431.0
+offset_top = -453.0
+offset_right = 1946.0
+offset_bottom = 102.0
+texture = ExtResource("2_7ainc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1078, 501)
@@ -58,7 +78,7 @@ script = ExtResource("2_kreex")
 position = Vector2(1078, 501)
 script = ExtResource("3_uo3e5")
 priority_override = false
-priority = 0
+priority = 1
 zoom = Vector2(1, 1)
 follow_mode = 4
 follow_target = NodePath("../Player")
@@ -78,6 +98,26 @@ tween_parameters = SubResource("Resource_gxb6v")
 tween_on_load = true
 inactive_update_mode = 0
 
+[node name="zoom out" type="Node2D" parent="."]
+position = Vector2(1659, -13)
+script = ExtResource("3_uo3e5")
+priority_override = false
+priority = 0
+zoom = Vector2(0.5, 0.5)
+follow_mode = 0
+frame_preview = true
+pixel_perfect = false
+limit/draw_limits = true
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/limit_node_target = NodePath("")
+limit/smoothed = false
+tween_parameters = SubResource("Resource_n38rn")
+tween_on_load = true
+inactive_update_mode = 0
+
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_1ojvd")
 
@@ -86,7 +126,11 @@ z_index = 1
 position = Vector2(1078, 534)
 
 [node name="debug_doors" parent="." instance=ExtResource("6_rw4x8")]
+position = Vector2(-1854, 6)
 next_level = "Main"
+
+[node name="trigger" parent="." instance=ExtResource("7_vm25o")]
+position = Vector2(1490, 384)
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(2579.25, 623)

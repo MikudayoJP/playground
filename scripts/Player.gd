@@ -41,4 +41,3 @@ func _physics_process(delta):
 		current_speed = walking_speed
 	
 	move_and_slide()
-	
