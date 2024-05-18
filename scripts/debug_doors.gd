@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var colorRect = $"Area2D_test/ColorRect"
+#TODO don't like this
+@onready var player = $"/root/Main/Player"
 
 #cant you do it like this @export String next_level; ?
 @export var next_level : String

@@ -49,13 +49,13 @@ stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1061, 501)
+position = Vector2(1078, 501)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("2_kreex")
 
 [node name="PhantomCamera2D" type="Node2D" parent="."]
-position = Vector2(1061, 501)
+position = Vector2(1078, 501)
 script = ExtResource("3_uo3e5")
 priority_override = false
 priority = 0
@@ -83,7 +83,7 @@ curve = SubResource("Curve2D_1ojvd")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("5_0bf4j")]
 z_index = 1
-position = Vector2(1061, 450)
+position = Vector2(1078, 534)
 
 [node name="debug_doors" parent="." instance=ExtResource("6_rw4x8")]
 next_level = "Main"
