@@ -1,7 +1,9 @@
 extends Node2D
 
+@export var cameraPath : String
+
 @onready var colorRect = $"Area2D/ColorRect"
-@onready var pcam_2d : PhantomCamera2D = $"/root/testScene/zoom out"
+@onready var pcam_2d : PhantomCamera2D = get_node(cameraPath)
 
 var cameraWasActivated : bool = false
 

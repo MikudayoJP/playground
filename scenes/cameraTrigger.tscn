@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://kvb4lobhywvg"]
 
-[ext_resource type="Script" path="res://scripts/trigger.gd" id="1_i3rmk"]
+[ext_resource type="Script" path="res://scripts/cameraTrigger.gd" id="1_i3rmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m8oxu"]
 size = Vector2(82, 216)
 
-[node name="trigger" type="Node2D"]
+[node name="cameraTrigger" type="Node2D"]
 script = ExtResource("1_i3rmk")
 
 [node name="Area2D" type="Area2D" parent="."]

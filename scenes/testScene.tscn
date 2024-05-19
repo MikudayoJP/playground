@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="5_0bf4j"]
 [ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_rw4x8"]
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_0cswa"]
-[ext_resource type="PackedScene" uid="uid://kvb4lobhywvg" path="res://scenes/trigger.tscn" id="7_vm25o"]
+[ext_resource type="PackedScene" uid="uid://kvb4lobhywvg" path="res://scenes/cameraTrigger.tscn" id="7_vm25o"]
 
 [sub_resource type="Resource" id="Resource_gxb6v"]
 script = ExtResource("4_w7kck")
@@ -129,8 +129,9 @@ position = Vector2(1078, 534)
 position = Vector2(-1854, 6)
 next_level = "Main"
 
-[node name="trigger" parent="." instance=ExtResource("7_vm25o")]
+[node name="cameraTrigger" parent="." instance=ExtResource("7_vm25o")]
 position = Vector2(1490, 384)
+cameraPath = "/root/testScene/zoom out"
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(2579.25, 623)
