@@ -86,7 +86,13 @@ z_index = 1
 position = Vector2(1255, 534)
 
 [node name="debug_doors" parent="." instance=ExtResource("6_n2mp5")]
+position = Vector2(2028, 373)
 next_level = "testScene"
+
+[node name="debug_doors2" parent="." instance=ExtResource("6_n2mp5")]
+position = Vector2(313, 373)
+next_level = "pointAndClickTest"
+isPointAndClick = true
 
 [node name="floor" type="MeshInstance2D" parent="."]
 position = Vector2(2579.25, 623)

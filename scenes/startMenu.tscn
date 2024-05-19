@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6yr1da2by7tu"]
+
+[ext_resource type="Script" path="res://scenes/startMenu.gd" id="1_60rld"]
+[ext_resource type="Texture2D" uid="uid://c6803i634qvi0" path="res://assets/textures/background/1113694.png" id="2_12epi"]
+[ext_resource type="Texture2D" uid="uid://bd8b6u8cr3p8" path="res://assets/textures/1713343__safe_artist-colon-modularpon_artist-colon-themodpony_deleted+from+derpibooru_derpibooru+import_pinkie+pie_earth+pony_pony_cute_diapinkes_femal.png" id="3_bema8"]
+[ext_resource type="Texture2D" uid="uid://crgia64foq2ao" path="res://assets/textures/732354__safe_artist-colon-thedarknimbus_absurd+resolution_derpibooru+import_rarity_simple+background_solo_transparent_transparent+background_vector_wet.png" id="4_7iov0"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_88n0f"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_q43ho"]
+events = [SubResource("InputEventKey_88n0f")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_onx20"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_b0h35"]
+events = [SubResource("InputEventKey_onx20")]
+
+[node name="startMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_60rld")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1764.0
+offset_top = -2147.0
+offset_right = 8405.0
+offset_bottom = 3719.0
+texture = ExtResource("2_12epi")
+stretch_mode = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 74.0
+offset_right = 744.0
+offset_bottom = 240.0
+shortcut = SubResource("Shortcut_q43ho")
+text = "Start"
+icon = ExtResource("3_bema8")
+expand_icon = true
+language = "en"
+
+[node name="Close" type="Button" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 348.0
+offset_right = 742.0
+offset_bottom = 514.0
+shortcut = SubResource("Shortcut_b0h35")
+text = "Close"
+icon = ExtResource("4_7iov0")
+icon_alignment = 2
+expand_icon = true
+language = "en"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

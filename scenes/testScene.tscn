@@ -126,8 +126,8 @@ z_index = 1
 position = Vector2(1078, 534)
 
 [node name="debug_doors" parent="." instance=ExtResource("6_rw4x8")]
-position = Vector2(-1854, 6)
-next_level = "Main"
+position = Vector2(4, 379)
+next_level = "main"
 
 [node name="cameraTrigger" parent="." instance=ExtResource("7_vm25o")]
 position = Vector2(1490, 384)

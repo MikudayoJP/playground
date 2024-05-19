@@ -1,0 +1,122 @@
+[gd_scene load_steps=16 format=3 uid="uid://gksiqb28sck5"]
+
+[ext_resource type="Texture2D" uid="uid://cpgykrnn5rehj" path="res://assets/textures/background/pointAndClick/3119732__safe_derpibooru+import_equestria+girls_background_canterlot+high_image_jpeg_no+pony.jpeg" id="1_3jogl"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_qncu2"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2D.gd" id="3_pibgc"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_40bv2"]
+[ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="5_sf8a6"]
+[ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_cbhye"]
+[ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_3n686"]
+
+[sub_resource type="Resource" id="Resource_gxb6v"]
+script = ExtResource("4_40bv2")
+duration = 1.0
+transition = 0
+ease = 2
+
+[sub_resource type="Curve2D" id="Curve2D_1ojvd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, 501, 0, 0, 0, 0, 5159, 501)
+}
+point_count = 2
+
+[sub_resource type="QuadMesh" id="QuadMesh_dw4y2"]
+size = Vector2(1200, 50)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_8dphf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qu3y"]
+size = Vector2(1200, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_85csc"]
+size = Vector2(493.5, 231)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivxwj"]
+size = Vector2(232, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5d1q"]
+size = Vector2(321, 21)
+
+[node name="pointAndClickTest" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 2533.0
+offset_top = 44.0
+offset_right = 3847.0
+offset_bottom = 771.0
+texture = ExtResource("1_3jogl")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(3222, 439)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("2_qncu2")
+
+[node name="PhantomCamera2D" type="Node2D" parent="."]
+position = Vector2(3222, 439)
+script = ExtResource("3_pibgc")
+priority_override = false
+priority = 0
+zoom = Vector2(1, 1)
+follow_mode = 0
+frame_preview = true
+pixel_perfect = false
+limit/draw_limits = true
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+limit/limit_node_target = NodePath("")
+limit/smoothed = false
+tween_parameters = SubResource("Resource_gxb6v")
+tween_on_load = true
+inactive_update_mode = 0
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_1ojvd")
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("5_sf8a6")]
+z_index = 1
+position = Vector2(3731, 532)
+
+[node name="debug_doors" parent="." instance=ExtResource("6_cbhye")]
+position = Vector2(4100, 371)
+next_level = "main"
+
+[node name="floor" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2(2579.25, 623)
+scale = Vector2(4.29792, 1)
+mesh = SubResource("QuadMesh_dw4y2")
+texture = ExtResource("7_3n686")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="floor"]
+physics_material_override = SubResource("PhysicsMaterial_8dphf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
+shape = SubResource("RectangleShape2D_0qu3y")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2708, 538)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(83.25, 3.5)
+shape = SubResource("RectangleShape2D_85csc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(706, -125)
+shape = SubResource("RectangleShape2D_ivxwj")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(699.5, -140.5)
+shape = SubResource("RectangleShape2D_t5d1q")
