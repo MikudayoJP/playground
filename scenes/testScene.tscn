@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://blrxd38s81r8r"]
+[gd_scene load_steps=17 format=3 uid="uid://blrxd38s81r8r"]
 
 [ext_resource type="Texture2D" uid="uid://cfhkosmt2atbk" path="res://assets/textures/background/large.png" id="1_ev40j"]
 [ext_resource type="Texture2D" uid="uid://bi67oesbo1xv6" path="res://assets/textures/1693238312280675.png" id="2_7ainc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_rw4x8"]
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_0cswa"]
 [ext_resource type="PackedScene" uid="uid://kvb4lobhywvg" path="res://scenes/cameraTrigger.tscn" id="7_vm25o"]
+[ext_resource type="PackedScene" uid="uid://cpobkxdrv4p4r" path="res://scenes/npc_talk.tscn" id="9_whsw6"]
 
 [sub_resource type="Resource" id="Resource_gxb6v"]
 script = ExtResource("4_w7kck")
@@ -143,3 +144,7 @@ physics_material_override = SubResource("PhysicsMaterial_8dphf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
 shape = SubResource("RectangleShape2D_0qu3y")
+
+[node name="npcTalk" parent="." instance=ExtResource("9_whsw6")]
+position = Vector2(720, 336)
+lines = Array[String](["Hi!", "Bye!"])
