@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://gksiqb28sck5"]
+[gd_scene load_steps=17 format=3 uid="uid://gksiqb28sck5"]
 
 [ext_resource type="Texture2D" uid="uid://cpgykrnn5rehj" path="res://assets/textures/background/pointAndClick/3119732__safe_derpibooru+import_equestria+girls_background_canterlot+high_image_jpeg_no+pony.jpeg" id="1_3jogl"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_qncu2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://3lru41aobfjp" path="res://scenes/player.tscn" id="5_sf8a6"]
 [ext_resource type="PackedScene" uid="uid://cxk7o0gdwi7j" path="res://scenes/debug_doors.tscn" id="6_cbhye"]
 [ext_resource type="Texture2D" uid="uid://d35jevdp2lhsh" path="res://assets/icons/icon.png" id="7_3n686"]
+[ext_resource type="PackedScene" uid="uid://ix78a3fiqvo3" path="res://scenes/draggable_object.tscn" id="8_i4i26"]
 
 [sub_resource type="Resource" id="Resource_gxb6v"]
 script = ExtResource("4_40bv2")
@@ -120,3 +121,7 @@ shape = SubResource("RectangleShape2D_ivxwj")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(699.5, -140.5)
 shape = SubResource("RectangleShape2D_t5d1q")
+
+[node name="draggableObject" parent="." instance=ExtResource("8_i4i26")]
+position = Vector2(2973, 318)
+scale = Vector2(0.4, 0.4)
