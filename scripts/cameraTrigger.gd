@@ -11,7 +11,7 @@ func _on_area_2d_body_entered(body):
 	#needs to be updated for player specific --done
 	#TODO needs to be put into another script
 	if body.is_in_group("Player"): #Dand Input.is_action_pressed("interact"):
-		colorRect.set_color(Color.CHARTREUSE)
+		colorRect.set_color(Color.VIOLET)
 		if cameraWasActivated == false:
 			pcam_2d.set_priority(2)
 			await get_tree().create_timer(5.0).timeout
