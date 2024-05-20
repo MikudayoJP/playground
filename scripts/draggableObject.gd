@@ -1,4 +1,4 @@
-#@tool
+@tool
 extends Node2D
 #TODO get this shit done and be happy
 #@export var texture : Texture : set = _set_texture, get = _get_texture
@@ -19,6 +19,7 @@ extends Node2D
 #		func _get_texture() -> Texture:
 #			return texture
 
+
 var dragging = false
 var offest = Vector2(0,0)
 
@@ -34,3 +35,4 @@ func _on_button_button_down():
 
 func _on_button_button_up():
 	dragging = false
+	

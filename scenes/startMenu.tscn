@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b6yr1da2by7tu"]
 
-[ext_resource type="Script" path="res://scenes/startMenu.gd" id="1_60rld"]
+[ext_resource type="Script" path="res://scripts/startMenu.gd" id="1_60rld"]
 [ext_resource type="Texture2D" uid="uid://c6803i634qvi0" path="res://assets/textures/background/1113694.png" id="2_12epi"]
 [ext_resource type="Texture2D" uid="uid://bd8b6u8cr3p8" path="res://assets/textures/1713343__safe_artist-colon-modularpon_artist-colon-themodpony_deleted+from+derpibooru_derpibooru+import_pinkie+pie_earth+pony_pony_cute_diapinkes_femal.png" id="3_bema8"]
 [ext_resource type="Texture2D" uid="uid://crgia64foq2ao" path="res://assets/textures/732354__safe_artist-colon-thedarknimbus_absurd+resolution_derpibooru+import_rarity_simple+background_solo_transparent_transparent+background_vector_wet.png" id="4_7iov0"]
