@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dmt8vg3c424r6"]
+[gd_scene load_steps=38 format=3 uid="uid://dmt8vg3c424r6"]
 
 [ext_resource type="Material" uid="uid://cq7ufoekja33p" path="res://assets/materials/standardTestMaterial.tres" id="1_2g72i"]
 [ext_resource type="Texture2D" uid="uid://bhw8opr7h3ha2" path="res://assets/hdris/kloofendal_48d_partly_cloudy_puresky_4k.hdr" id="2_hqvt1"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://vo6ll3wquqj4" path="res://assets/textures/256x256/Roofs/Roofs_01-256x256.png" id="8_0t84w"]
 [ext_resource type="Texture2D" uid="uid://c8ks126pk7mj0" path="res://assets/textures/256x256/Bricks/Bricks_13-256x256.png" id="9_xshs2"]
 [ext_resource type="Texture2D" uid="uid://dcjgwiyfapsct" path="res://assets/textures/256x256/Bricks/Bricks_14-256x256.png" id="10_wbdke"]
+[ext_resource type="AudioStream" uid="uid://ceifwwrmeiqt2" path="res://assets/audio/01-01 Hearts as Strong as Horses.wav" id="11_d6irk"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_tbvvn"]
 panorama = ExtResource("2_hqvt1")
@@ -295,3 +296,7 @@ shape = SubResource("ConvexPolygonShape3D_qblnb")
 
 [node name="entity_0_brush_7_collision_shape" type="CollisionShape3D" parent="QodotMap2/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jkdl3")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_d6irk")
+autoplay = true
